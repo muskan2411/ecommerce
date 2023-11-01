@@ -36,7 +36,7 @@ console.log(product);
   return (
       <div className='productListingContainer'>
           {product && product.map((item: any, k: any) => (
-              <div className="card" style={{ width: "18rem", display: "inline-block", margin: "10px" }}>
+              <div className="card" style={{ width: "18rem", display: "inline-block", margin: "10px" }} key={"k"}>
                   <img src={item.image} className="card-img-top" alt="..." />
                   <div className="card-body">
                       <h5 className="card-title">{item.title}</h5>
@@ -46,7 +46,7 @@ console.log(product);
               </div>
           ))}
           {productTwo && productTwo.map((item: any, k: any) => (
-              <div className="card" style={{ width: "18rem", display: "inline-block", margin: "10px" }}>
+              <div className="card" style={{ width: "18rem", display: "inline-block", margin: "10px" }} key={"k"}>
                   <img src={item.product_image} className="card-img-top" alt="..." />
                   <div className="card-body">
                       <h5 className="card-title">{item.title}</h5>
